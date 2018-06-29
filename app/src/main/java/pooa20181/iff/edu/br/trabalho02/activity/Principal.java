@@ -28,7 +28,7 @@ import pooa20181.iff.edu.br.trabalho02.R;
 
 
             @Override
-    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = null;
 
                         try {
