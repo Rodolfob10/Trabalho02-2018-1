@@ -75,7 +75,7 @@ public class CandidatoAdapter extends RecyclerView.Adapter{
                         nomeCandidato = (TextView) itemView.findViewById(R.id.tvNome);
                         partido = (TextView) itemView.findViewById(R.id.tvPartido);
                         numeroUrna = (TextView) itemView.findViewById(R.id.tvNumeroUrna);
-                        cargo = (TextView) itemView.findViewById(R.id.tvSecao);
+                        cargo = (TextView) itemView.findViewById(R.id.tvCargo);
 
                         txtNomeCandidato = (TextView) itemView.findViewById(R.id.textNome);
                         txtPartido = (TextView) itemView.findViewById(R.id.textPartido);
