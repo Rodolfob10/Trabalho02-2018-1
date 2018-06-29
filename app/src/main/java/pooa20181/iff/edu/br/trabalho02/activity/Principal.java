@@ -10,7 +10,7 @@ import android.widget.ListView;
 
 import pooa20181.iff.edu.br.trabalho02.R;
 
-        public class PrincipalActivity extends AppCompatActivity implements AdapterView.OnItemClickListener{
+        public class Principal extends AppCompatActivity implements AdapterView.OnItemClickListener{
 
             private String[] activities = {"ListaEleitorActivity"};
              @Override
