@@ -1,4 +1,4 @@
-package pooa20181.iff.edu.br.trabalho02;
+package pooa20181.iff.edu.br.trabalho02.activity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
