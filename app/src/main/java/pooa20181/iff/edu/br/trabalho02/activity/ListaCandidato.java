@@ -17,7 +17,7 @@ import pooa20181.iff.edu.br.trabalho02.R;
 import pooa20181.iff.edu.br.trabalho02.adapter.CandidatoAdapter;
 import pooa20181.iff.edu.br.trabalho02.model.Candidato;
 import io.realm.Realm;
-import io.realm.RealmConfiguration;
+
 
 public class ListaCandidato extends AppCompatActivity implements ClickRecyclerViewListener {
 
@@ -27,8 +27,6 @@ public class ListaCandidato extends AppCompatActivity implements ClickRecyclerVi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_candidato);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
         realm = Realm.getDefaultInstance();
 
