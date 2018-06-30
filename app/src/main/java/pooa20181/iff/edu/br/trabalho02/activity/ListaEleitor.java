@@ -31,7 +31,7 @@ public class ListaEleitor extends AppCompatActivity implements ClickRecyclerView
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ListaEleitor.this, CandidatoDetalhe.class);
+                Intent intent = new Intent(ListaEleitor.this, EleitorDetalhe.class);
                 intent.putExtra("id", 0);
                 startActivity(intent);
             }
@@ -42,19 +42,19 @@ public class ListaEleitor extends AppCompatActivity implements ClickRecyclerView
     {
         super.onResume();
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.rvEleitor);
-        recyclerView.setAdapter(new EleitorAdapter(getCandidatos(), this, this));
+        recyclerView.setAdapter(new EleitorAdapter(getEleitores(), this, this));
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 
-    public List<Eleitor> getCandidatos()
+    public List<Eleitor> getEleitores()
     {
         return (List) realm.where(Eleitor.class).findAll();
     }
 
     public void onClick(Object object) {
         Eleitor eleitor = (Eleitor) object;
-        Intent intent = new Intent( ListaEleitor.this, CandidatoDetalhe.class);
+        Intent intent = new Intent( ListaEleitor.this, EleitorDetalhe.class);
         intent.putExtra("id", eleitor.getId());
         startActivity(intent);
     }
@@ -63,7 +63,5 @@ public class ListaEleitor extends AppCompatActivity implements ClickRecyclerView
         super.finish();
         realm.close();
     }
-
-
 
 }

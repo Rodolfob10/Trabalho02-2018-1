@@ -38,6 +38,9 @@ import pooa20181.iff.edu.br.trabalho02.R;
                     } catch (ClassNotFoundException e) {
                         e.printStackTrace();
                     }
-                    startActivity(intent);
+                startActivity(intent);
             }
 }
+
+
+

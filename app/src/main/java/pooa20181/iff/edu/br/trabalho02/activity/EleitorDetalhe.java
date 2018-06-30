@@ -16,7 +16,7 @@ import io.realm.Realm;
 import pooa20181.iff.edu.br.trabalho02.R;
 import pooa20181.iff.edu.br.trabalho02.model.Eleitor;
 
-public class DetalheEleitor  extends AppCompatActivity {
+public class EleitorDetalhe extends AppCompatActivity {
 
     EditText edtNomeEleitor, edtNomeMae, edtDataNascimento, edtNumeroTitulo, edtZona, edtSecao, edMunicipio;
     Button btnAdiciona, btnAltera, btnExclui;

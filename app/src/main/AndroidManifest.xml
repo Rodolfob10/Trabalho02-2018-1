@@ -21,6 +21,9 @@
             android:name=".activity.ListaCandidato"
             android:label="@string/title_activity_lista_candidato"/>
         <activity android:name=".activity.CandidatoDetalhe"></activity>
+        <activity android:name=".activity.ListaEleitor"
+            android:label="ListaEleitor"/>
+        <activity android:name=".activity.EleitorDetalhe"></activity>
     </application>
 
 </manifest>
