@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Trabalho02</string>
+    <string name="btAlterar">Alterar</string>
+    <string name="btExcluir">Excluir</string>
+    <string name="edtmunicipio">Municipio</string>
+    <string name="edtEstado">Estado</string>
+    <string name="edtnvotos">Votos</string>
+    <string name="edtcargo">Cargo</string>
+    <string name="edtnUrna">Urna</string>
+    <string name="edtpartido">Partido</string>
+    <string name="edtnome">Nome</string>
+    <string name="btAdicionar">Adicionar</string>
 </resources>
