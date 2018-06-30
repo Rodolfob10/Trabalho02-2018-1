@@ -1,12 +1,24 @@
 <resources>
     <string name="app_name">Trabalho02</string>
+    <string name="tzona">Zona Eleitoral</string>
+    <string name="tNome">Nome do Eleitor</string>
+    <string name="tNomeMae">Nome da Mãe</string>
+    <string name="tData">Data de Nascimento</string>
+    <string name="tNumero">Número do Título</string>
+    <string name="tsecao">Seção Eleitoral</string>
+    <string name="edtnome">Nome do Candidato:</string>
+    <string name="edtpartido">Partido:</string>
+    <string name="edtcargo">Cargo:</string>
+    <string name="edtnvotos">Numero de votos:</string>
+    <string name="edtnUrna">Número da Urna:</string>
+    <string name="edtEstado">Estado:</string>
+    <string name="edtmunicipio">Município:</string>
+    <string name="tmunicipio">Município</string>
+    <string name="btAdicionar">Adicionar</string>
+    <string name="btAlterar">Alterar</string>
+    <string name="btExcluir">Excluir</string>
+    <string name="title_activity_lista_eleitor">ListaEleitor</string>
+    <string name="title_activity_lista_candidato">ListaCandidato</string>
 
-    <string name="edtmunicipio">Municipio</string>
-    <string name="edtEstado">Estado</string>
-    <string name="edtnvotos">Votos</string>
-    <string name="edtcargo">Cargo</string>
-    <string name="edtnUrna">Urna</string>
-    <string name="edtpartido">Partido</string>
-    <string name="edtnome">Nome</string>
 
 </resources>

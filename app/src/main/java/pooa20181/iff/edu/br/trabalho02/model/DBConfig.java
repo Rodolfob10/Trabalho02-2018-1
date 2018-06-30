@@ -15,7 +15,7 @@ public class DBConfig extends Application{
                         RealmConfiguration.Builder builder = new RealmConfiguration.Builder();
                         builder.name("eleicao.realm");
                         builder.schemaVersion(0);
-                         builder.deleteRealmIfMigrationNeeded();
+                        builder.deleteRealmIfMigrationNeeded();
                         RealmConfiguration realmConfiguration = builder.build();
                         Realm.setDefaultConfiguration(realmConfiguration);
 
