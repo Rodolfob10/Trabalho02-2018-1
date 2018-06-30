@@ -1,7 +1,6 @@
 package pooa20181.iff.edu.br.trabalho02.adapter;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -39,7 +38,7 @@ public class CandidatoAdapter extends RecyclerView.Adapter{
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder viewHolder, int position) {
+    public void onBindViewHolder(RecyclerView.ViewHolder viewHolder, int position) {
 
         CandidatoViewHolder candidatoHolder = (CandidatoViewHolder) viewHolder;
         Candidato candidato = this.candidatos.get(position);
@@ -75,15 +74,15 @@ public class CandidatoAdapter extends RecyclerView.Adapter{
         public CandidatoViewHolder(View itemView){
             super(itemView);
 
-            nomeCandidato = (TextView) itemView.findViewById(R.id.tvNome);
-            partido = (TextView) itemView.findViewById(R.id.tvPartido);
-            numeroUrna = (TextView) itemView.findViewById(R.id.tvNumeroUrna);
+            nomeCandidato = (TextView) itemView.findViewById(R.id.tvNomeEleitor);
+            partido = (TextView) itemView.findViewById(R.id.tvNumeroTitulo);
+            numeroUrna = (TextView) itemView.findViewById(R.id.tvZona);
             cargo = (TextView) itemView.findViewById(R.id.tvCargo);
 
-            txtNomeCandidato = (TextView) itemView.findViewById(R.id.textNome);
-            txtPartido = (TextView) itemView.findViewById(R.id.textPartido);
-            txtNumeroUrna = (TextView) itemView.findViewById(R.id.textNumeroUrna);
-            txtCargo = (TextView) itemView.findViewById(R.id.textCargo);
+            txtNomeCandidato = (TextView) itemView.findViewById(R.id.textNomeEleitor);
+            txtPartido = (TextView) itemView.findViewById(R.id.textNumeroTitulo);
+            txtNumeroUrna = (TextView) itemView.findViewById(R.id.textZona);
+            txtCargo = (TextView) itemView.findViewById(R.id.textSecao);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

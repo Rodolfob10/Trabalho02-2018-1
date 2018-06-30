@@ -103,5 +103,5 @@ public class Eleitor extends RealmObject implements Serializable {
     public void setMunicipio(String municipio) {
         this.municipio = municipio;
     }
-    
+
 }
