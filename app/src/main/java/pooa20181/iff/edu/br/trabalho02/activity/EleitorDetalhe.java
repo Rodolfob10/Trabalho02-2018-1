@@ -12,6 +12,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+
 import io.realm.Realm;
 import pooa20181.iff.edu.br.trabalho02.R;
 import pooa20181.iff.edu.br.trabalho02.model.Eleitor;
@@ -25,7 +26,7 @@ public class EleitorDetalhe extends AppCompatActivity {
     int id;
     private Realm realm;
 
-    SimpleDateFormat form = new SimpleDateFormat("dd/MM/yyyy");
+    SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,10 +54,12 @@ public class EleitorDetalhe extends AppCompatActivity {
             btnAdiciona.setEnabled(false);
             btnAdiciona.setClickable(false);
             btnAdiciona.setVisibility(View.INVISIBLE);
+
             eleitor = realm.where(Eleitor.class).equalTo("id", id).findFirst();
+
             edtNomeEleitor.setText(eleitor.getNome());
             edtNomeMae.setText(eleitor.getNomeMae());
-            edtDataNascimento.setText(form.format((Date) eleitor.getDataNascimento()));
+            edtDataNascimento.setText(formato.format((Date) eleitor.getDataNascimento()));
             edtNumeroTitulo.setText(eleitor.getNumeroTitulo());
             edtZona.setText(eleitor.getZona());
             edMunicipio.setText(eleitor.getMunicipio());
@@ -129,6 +132,7 @@ public class EleitorDetalhe extends AppCompatActivity {
     {
         realm.beginTransaction();
         setEgrava(eleitor);
+
         realm.copyFromRealm(eleitor);
         realm.commitTransaction();
         realm.close();
@@ -143,7 +147,7 @@ public class EleitorDetalhe extends AppCompatActivity {
         eleitor.setNomeMae(edtNomeMae.getText().toString());
 
         try {
-            eleitor.setDataNascimento((Date) form.parse(edtDataNascimento.getText().toString()));
+            eleitor.setDataNascimento((Date) formato.parse(edtDataNascimento.getText().toString()));
         } catch (ParseException e) {
             e.printStackTrace();
         }

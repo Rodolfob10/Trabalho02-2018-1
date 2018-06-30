@@ -102,15 +102,13 @@ public class CandidatoDetalhe extends AppCompatActivity {
                 int proximoID = 1;
                 if(realm.where(Candidato.class).max("id") != null)
                 {
-                               proximoID = realm.where(Candidato.class).max("id").intValue()+1;
+                    proximoID = realm.where(Candidato.class).max("id").intValue()+1;
                 }
 
                 realm.beginTransaction();
                 Candidato candidato = new Candidato();
                 candidato.setId(proximoID);
-
                 setEgrava(candidato);
-
                 realm.copyToRealm(candidato);
                 realm.commitTransaction();
                 realm.close();
@@ -122,11 +120,12 @@ public class CandidatoDetalhe extends AppCompatActivity {
             {
                 realm.beginTransaction();
                 setEgrava(candidato);
+
                 realm.copyFromRealm(candidato);
                 realm.commitTransaction();
                 realm.close();
 
-                        Toast.makeText(this, "Candidato Alterado", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "Candidato Alterado", Toast.LENGTH_LONG).show();
                 this.finish();
             }
 

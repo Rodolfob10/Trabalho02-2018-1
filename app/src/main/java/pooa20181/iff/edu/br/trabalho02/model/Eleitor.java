@@ -67,11 +67,7 @@ public class Eleitor extends RealmObject implements Serializable {
     public Date getDataNascimento() {
         return dataNascimento;
     }
-
-    public void setDataNascimento(Date dataNascimento) {
-        this.dataNascimento = dataNascimento;
-    }
-
+    
     public String getNumeroTitulo() {
         return numeroTitulo;
     }
@@ -104,4 +100,7 @@ public class Eleitor extends RealmObject implements Serializable {
         this.municipio = municipio;
     }
 
+    public void setDataNascimento(Date dataNascimento) {
+        this.dataNascimento = dataNascimento;
+    }
 }
