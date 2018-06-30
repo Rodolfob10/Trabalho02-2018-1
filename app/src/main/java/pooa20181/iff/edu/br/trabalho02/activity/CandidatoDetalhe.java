@@ -41,19 +41,19 @@ public class CandidatoDetalhe extends AppCompatActivity {
                 id = (int) intent.getSerializableExtra("id");
                 realm = Realm.getDefaultInstance();
 
-                       if(id != 0)
-                    {
-                        btnAdicionar.setEnabled(false);
-                    btnAdicionar.setClickable(false);
-                    btnAdicionar.setVisibility(View.INVISIBLE);
-                    candidato = realm.where(Candidato.class).equalTo("id", id).findFirst();
-                    edtNome.setText(candidato.getNome());
-                    edtPartido.setText(candidato.getPartido());
-                    edtNumeroVotos.setText(candidato.getNumeroVotos());
-                    edtCargo.setText(candidato.getCargo());
-                    edtNumeroUrna.setText(candidato.getNumeroUrna());
-                    edtEstado.setText(candidato.getEstado());
-                    edtMunicipio.setText(candidato.getMunicipio());
+                       if(id != 0) {
+
+                           btnAdicionar.setEnabled(false);
+                           btnAdicionar.setClickable(false);
+                           btnAdicionar.setVisibility(View.INVISIBLE);
+                           candidato = realm.where(Candidato.class).equalTo("id", id).findFirst();
+                           edtNome.setText(candidato.getNome());
+                           edtPartido.setText(candidato.getPartido());
+                           edtNumeroVotos.setText(candidato.getNumeroVotos());
+                           edtCargo.setText(candidato.getCargo());
+                           edtNumeroUrna.setText(candidato.getNumeroUrna());
+                           edtEstado.setText(candidato.getEstado());
+                           edtMunicipio.setText(candidato.getMunicipio());
                 }
                 else{
                         btnAlterar.setEnabled(false);
@@ -65,18 +65,18 @@ public class CandidatoDetalhe extends AppCompatActivity {
                     }
 
                         btnAdicionar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                salvar();
-                                    }
-        });
+                            @Override
+                            public void onClick(View view) {
+                                salvar();
+                            }
+                        });
 
                        btnExcluir.setOnClickListener(new View.OnClickListener() {
-          @Override
-           public void onClick(View view) {
+                            @Override
+                            public void onClick(View view) {
                                        excluir();
-                                    }
-        });
+                            }
+                       });
 
                        btnAlterar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -114,8 +114,7 @@ public class CandidatoDetalhe extends AppCompatActivity {
                 realm.copyToRealm(candidato);
                 realm.commitTransaction();
                 realm.close();
-
-                        Toast.makeText(this, "Candidato Cadastrado", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "Candidato Cadastrado", Toast.LENGTH_LONG).show();
                 this.finish();
             }
 
@@ -123,8 +122,7 @@ public class CandidatoDetalhe extends AppCompatActivity {
             {
                 realm.beginTransaction();
                 setEgrava(candidato);
-
-                       realm.copyFromRealm(candidato);
+                realm.copyFromRealm(candidato);
                 realm.commitTransaction();
                 realm.close();
 
@@ -138,6 +136,7 @@ public class CandidatoDetalhe extends AppCompatActivity {
                 candidato.setPartido(edtPartido.getText().toString());
                 candidato.setNumeroVotos(edtNumeroVotos.getText().toString());
                 candidato.setNumeroUrna(edtNumeroUrna.getText().toString());
+                candidato.setCargo(edtCargo.getText().toString());
                 candidato.setEstado(edtEstado.getText().toString());
                 candidato.setMunicipio(edtMunicipio.getText().toString());
             }
