@@ -26,18 +26,18 @@ public class CandidatoDetalhe extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_candidato_detalhe);
 
-                edtNome = (EditText) findViewById(R.id.edtNomeCandidato);
-                edtPartido = (EditText)findViewById(R.id.edtPartido);
-                edtCargo = (EditText) findViewById(R.id.edtCargo);
-                edtNumeroVotos = (EditText) findViewById(R.id.edtNumeroVotos);
-                edtNumeroUrna = (EditText) findViewById(R.id.edtNumeroUrna);
-                edtEstado = (EditText) findViewById(R.id.edtEstado);
+                edtNome = (EditText) findViewById(R.id.edtNomeEleitor);
+                edtPartido = (EditText)findViewById(R.id.edtNomeMae);
+                edtCargo = (EditText) findViewById(R.id.edtNumeroTitulo);
+                edtNumeroVotos = (EditText) findViewById(R.id.edtZona);
+                edtNumeroUrna = (EditText) findViewById(R.id.edtDataNascimento);
+                edtEstado = (EditText) findViewById(R.id.edtSecao);
                 edtMunicipio = (EditText) findViewById(R.id.edtMunicipio);
                 btnAdicionar = (Button) findViewById(R.id.btnAdicionar);
-                btnAlterar = (Button) findViewById(R.id.btnAlterar);
-                btnExcluir = (Button) findViewById(R.id.btnExcluir);
+                btnAlterar = (Button) findViewById(R.id.btnAltera);
+                btnExcluir = (Button) findViewById(R.id.btnExclui);
 
-                        Intent intent = getIntent();
+                Intent intent = getIntent();
                 id = (int) intent.getSerializableExtra("id");
                 realm = Realm.getDefaultInstance();
 
@@ -126,7 +126,7 @@ public class CandidatoDetalhe extends AppCompatActivity {
                 realm.commitTransaction();
                 realm.close();
 
-                        Toast.makeText(this, "Eleitor Alterado", Toast.LENGTH_LONG).show();
+                        Toast.makeText(this, "Candidato Alterado", Toast.LENGTH_LONG).show();
                 this.finish();
             }
 
