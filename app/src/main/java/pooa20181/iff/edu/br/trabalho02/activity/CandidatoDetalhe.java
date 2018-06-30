@@ -18,8 +18,7 @@ public class CandidatoDetalhe extends AppCompatActivity {
     Button btnAdicionar, btnAlterar, btnExcluir;
 
 
-
-            Candidato candidato;
+    Candidato candidato;
     int id;
     private Realm realm;
     @Override
@@ -27,15 +26,14 @@ public class CandidatoDetalhe extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_candidato_detalhe);
 
-                        edtNome = (EditText) findViewById(R.id.edtNomeCandidato);
+                edtNome = (EditText) findViewById(R.id.edtNomeCandidato);
                 edtPartido = (EditText)findViewById(R.id.edtPartido);
-               edtCargo = (EditText) findViewById(R.id.edtCargo);
+                edtCargo = (EditText) findViewById(R.id.edtCargo);
                 edtNumeroVotos = (EditText) findViewById(R.id.edtNumeroVotos);
                 edtNumeroUrna = (EditText) findViewById(R.id.edtNumeroUrna);
                 edtEstado = (EditText) findViewById(R.id.edtEstado);
                 edtMunicipio = (EditText) findViewById(R.id.edtMunicipio);
-
-                        btnAdicionar = (Button) findViewById(R.id.btnAdicionar);
+                btnAdicionar = (Button) findViewById(R.id.btnAdicionar);
                 btnAlterar = (Button) findViewById(R.id.btnAlterar);
                 btnExcluir = (Button) findViewById(R.id.btnExcluir);
 
@@ -45,7 +43,7 @@ public class CandidatoDetalhe extends AppCompatActivity {
 
                        if(id != 0)
                     {
-                                btnAdicionar.setEnabled(false);
+                        btnAdicionar.setEnabled(false);
                     btnAdicionar.setClickable(false);
                     btnAdicionar.setVisibility(View.INVISIBLE);
                     candidato = realm.where(Candidato.class).equalTo("id", id).findFirst();
